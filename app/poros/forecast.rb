@@ -21,11 +21,11 @@ class Forecast
        icon: @current[:weather].first[:icon]
      }
    end
-   
+
   def daily_weather
     @daily[0..4].map do |day|
       {
-        date: Time.at(day[:dt]).to_s,
+        date: Time.at(day[:dt]).utc.to_s,
         sunrise: Time.at(day[:sunrise]).to_s,
         sunset: Time.at(day[:sunset]).to_s,
         max_temp: day[:temp][:max],
