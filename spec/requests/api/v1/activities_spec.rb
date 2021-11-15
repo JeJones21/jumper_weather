@@ -14,5 +14,11 @@ RSpec.describe 'Activities Request' do
     expect(activities[:data]).to have_key(:type)
     expect(activities[:data]).to have_key(:attributes)
     expect(activities[:data][:attributes]).to be_a(Hash)
+
+    expect(activities[:data][:attributes]).to have_key(:activities)
+    expect(activities[:data][:attributes][:activities]).to be_a(Array)
+    expect(activities[:data][:attributes][:activities].first).to be_a(Hash)
+    expect(activities[:data][:attributes][:activities].first).to have_key(:type)
+    expect(activities[:data][:attributes][:activities].first[:type]).to be_a(String)
   end
 end
