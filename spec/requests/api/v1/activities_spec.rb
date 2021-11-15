@@ -9,7 +9,8 @@ RSpec.describe 'Activities Request' do
 
     expect(activities).to be_a(Hash)
     expect(activities).to have_key(:data)
-    expect(activities[:data]).to be_a(Hash)
+    # expect(activities[:data]).to be_a(Hash)
+    require "pry"; binding.pry
     expect(activities[:data]).to have_key(:id)
     expect(activities[:data]).to have_key(:type)
     expect(activities[:data]).to have_key(:attributes)
