@@ -1,6 +1,6 @@
 class ActivitiesService
   def self.find_activities(type)
-    response = conn.get('/api/activity?type=:type')
+    response = conn.get("/api/activity?type=#{type}")
     parse_json(response)
   end
 
