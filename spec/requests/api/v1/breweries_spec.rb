@@ -10,4 +10,10 @@ RSpec.describe '/breweries' do
     expect(brew_info).to be_a(Hash)
     expect(brew_info[:data]).to be_a(Hash)
   end
+
+  # it "errors out if params are blank" do
+  #   get '/api/v1/breweries?location='
+  #   expect(response).to be_unsuccessful
+  # end
+  #this sad path needs to be refactored.
 end
