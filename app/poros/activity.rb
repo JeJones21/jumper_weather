@@ -13,8 +13,8 @@ class Activity
 
   def format_forecast(data)
     {
-      summary: data[:forecast].current.conditions,
-      temperature: data[:forecast].current.temperature.to_s + ' F'
+      summary: data[:forecast].current[:weather].first[:description],
+      temperature: data[:forecast].current[:temp].to_s + ' F'
     }
   end
 
