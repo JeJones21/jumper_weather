@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'forecast', to: 'forecast#index'
       get 'activities', to: 'activities#index'
       get 'backgrounds', to: 'backgrounds#index'
+      get 'breweries', to: 'breweries#index'
     end
   end
 end
