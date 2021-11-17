@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 2021_11_17_023243) do
     t.string "access_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
-    t.timestamps
   end
 
 end
