@@ -41,6 +41,7 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'vcr'
   gem 'webmock'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
@@ -53,7 +54,6 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'simplecov'
-  gem 'shoulda-matchers', '~> 3.1'
 end
 
 
