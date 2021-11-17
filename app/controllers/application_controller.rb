@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::API
-  helper_method :unauthorized
-  protect_from_forgery with: :exception
   def unauthorized
     render json: {
       message: 'Credentials are incorrect',

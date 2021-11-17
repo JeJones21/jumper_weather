@@ -32,10 +32,10 @@ RSpec.describe 'user#create' do
     }
 
     post '/api/v1/users', params: body
-    
+
     user = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to have_http_status(:bad_request)
-    expect(user).to eq({ message: ["Email has already been taken"] })
+    expect(user).to eq({ error: "user already exists" })
   end
 end

@@ -2,15 +2,14 @@ require 'rails_helper'
 
 RSpec.describe 'sessions#create' do
   it 'creates a session' do
+    jj = User.create!(email: "jj@dev.com", password_digest: "$2a$12$qwOoIpQBkj3/R/CwCzz0LuZLFqrTwcHjtpLnt9U12Rlvc1BsIwiEy", access_token: "4fb2ee88bae9debfdeb2")
+
     body = {
       email: "jj@dev.com",
-      password: "password",
-      password_confirmation: "password"
+      password: "password"
     }
-    jj = User.create(email: "jj@dev.com", password_digest: "bbbaaa", access_token: "575757557x")
 
     post '/api/v1/sessions', params: body
-
     expect(response).to be_successful
 
     user = JSON.parse(response.body, symbolize_names: true)
