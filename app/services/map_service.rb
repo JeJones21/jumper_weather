@@ -13,7 +13,6 @@ class MapService
       body = parse_json(response)
     end
 
-
   private
 
     def conn

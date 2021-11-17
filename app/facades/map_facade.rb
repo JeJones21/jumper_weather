@@ -5,5 +5,10 @@ class MapFacade
       result = data[:results].first[:locations].first[:latLng]
       Location.new(result)
     end
+
+    def get_the_deets(from, to)
+      data = MapService.route_data(from, to)
+      data[:route][:formattedTime]
+    end
   end
 end

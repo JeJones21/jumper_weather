@@ -8,7 +8,7 @@ RSpec.describe 'roadtrip#endpoint' do
     body = {
         origin: "Denver,CO",
         destination: "Placitas,NM",
-        api_key: "555555555"
+        api_key: jj.access_token
     }
 
     headers = {
@@ -32,10 +32,11 @@ RSpec.describe 'roadtrip#endpoint' do
     jj = User.create!(email: "gitlost@iam.com",
                       password_digest: "fearandloathinginlasvegas"
                     )
+
     body = {
       origin: "Denver,CO",
       destination: "London, England",
-      api_key: "555555555"
+      api_key: jj.access_token
     }
     headers = {
        'Content-Type': "application/json",
