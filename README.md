@@ -88,9 +88,9 @@ Sweather Weather is a backend application that exposes several external API's to
 4. Get API keys from [MapQuest](https://developer.mapquest.com/documentation/), [OpenWeather](https://openweathermap.org/api), and [Unsplash](https://unsplash.com/documentation#creating-a-developer-account)
 5. Enter API keys into your `application.yml` file 
 ```
-map_consumer_key: <enter your key here>
+map_key: <enter your key here>
 weather_key: <enter your key here>
-background_access_key: <enter your key here>
+background_key: <enter your key here>
 
 ```
 
